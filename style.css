@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: whitesmoke;
+
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-b{
+    height: 400px;
+    width: 400px;
+    background-color: rgba(250, 235, 215, 0.2);
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 9;
+
+}
+#nav{
+    height: 145px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 150px;
+    gap: 50px;
+    position: fixed;
+    z-index: 99;
+}
+#nav img{
+    height: 75px;
+}
+#nav h4{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -99;
+}
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.685);
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+}
+#page1 h1{
+    font-size: 140px;
+    font-weight: 900;
+    position: relative;
+}
+#page1 h1::before{
+    content: "EAT DRINK PLAY";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+}
+#page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+}
+#page1 h3{
+    font-size: 15px;
+    font-weight: 500;
+    width: 40%;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+#scroller{
+    /* background: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in-1{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 25s ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scroller h4{
+    display: inline-block;
+    font-size: 140px;
+    font-weight: 900;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-right: 10px;
+    transform: all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+#scroller h4:hover{
+    color: white;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);  
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#about-us{
+    height: 60vh;
+    width: 100%;
+    padding: 0 50px;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+#about-us img{
+    height: 220px;
+    width: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+#about-us-in{
+    width: 40%;
+    text-align: center;
+
+}
+#about-us-in h3{
+    font-size: 50px;
+    font-weight: 900px;
+    margin-bottom: 30px;
+}
+#about-us-in p{
+    font-size: 20px;
+    line-height: 26px;
+}
+#card-holder{
+    /* background: red; */
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    z-index: 10;
+    position: relative;
+    
+}
+.card{
+    /* background: blue; */
+    height: 80%;
+    width: 24%;
+    border-radius: 12px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
+}
+#card-1{
+    background-image: url(https://sidcup-family-golf-rishabh07r.netlify.app/Assests/card1.avif);
+}
+#card-2{
+    background-image: url(https://sidcup-family-golf-rishabh07r.netlify.app/Assests/card2.webp);
+}
+#card-3{
+    background-image: url(https://sidcup-family-golf-rishabh07r.netlify.app/Assests/card3.avif);
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+    padding-top: 140px;
+    padding: 50px;
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+.overlay h4{
+    color: black;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.overlay p{
+    color: black;
+}
+.card .overlay:hover{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(-1,-1,0,15deg);
+}
+#green-div{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: red; */
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(white ,rgb(79, 81, 97))
+}
+#green-div h4{
+    width: 50%;
+    font-weight: 900;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+}
+#green-div img{
+    height: 100%;
+    object-fit: cover;
+    width: 5%;
+
+}
+#page3{
+    height: 50vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#page3 p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    width: 50%;
+
+    line-height: 36px;
+}
+#page3 img{
+
+    position: absolute;
+    height: 60px;
+}
+#page3 #colon1{
+    left: 18%;
+    top: 12%;
+}
+#page3 #colon2{
+    right: 18%;
+    bottom: 12%;
+}
+#footer {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6.5vw;
+    padding: 0 100px;
+  }
+  #footer > img {
+    position: absolute;
+    height: 100%;
+    z-index: 0;
+  }
+  #f1 img {
+    height: 100px;
+  }
+  #f1,
+  #f2,
+  #f3,
+  #f4 {
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+    /* background-color: red; */
+  }
+  #f2 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+  
+  #f3 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  #f4 h4 {
+    font-size: 1vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+  
