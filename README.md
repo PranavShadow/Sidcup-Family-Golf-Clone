@@ -35,7 +35,7 @@ Sidcup-Family-Golf-Clone/
 ├── style.css         # Styling
 ├── script.js         # JavaScript logic
 │
-├── assets/           # Images / media files
+├── hero.mp4          # Media files
 └── README.md         # Documentation
 ```
 
