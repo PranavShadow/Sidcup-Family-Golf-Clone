@@ -26,7 +26,7 @@ Landing Page
 ---
 
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Sidcup-Family-Golf-Clone/
@@ -40,7 +40,7 @@ Sidcup-Family-Golf-Clone/
 ```
 
 
-## 📄 Disclaimer
+## Disclaimer
 
 This project is created for **educational purposes only** and is a clone of the original website design.
 
